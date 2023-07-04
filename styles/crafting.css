@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+p {
+  margin-bottom: 2.5rem;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+.crafting {
+  padding: 3.5rem 1.25rem;
+  box-sizing: border-box;
+}
+.crafting__item {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 768px) {
+  .crafting__item {
+    justify-content: space-between;
+  }
+}
+.crafting__item:first-child {
+  margin-bottom: 6rem;
+}
+@media screen and (min-width: 768px) {
+  .crafting__item {
+    flex-direction: row;
+  }
+  .crafting__item:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+}
+.crafting__img img {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .crafting__img {
+    width: 48%;
+  }
+}
+.crafting__content {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .crafting__content {
+    width: 48%;
+  }
+}
+.crafting__content__title {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  color: #001186;
+}
+@media screen and (min-width: 768px) {
+  .crafting__content__title {
+    font-size: 1.5rem;
+  }
+}
+.crafting__content__text p {
+  font-size: 1rem;
+  line-height: 1.65;
+}/*# sourceMappingURL=crafting.css.map */

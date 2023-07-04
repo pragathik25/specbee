@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    font-family: "Work Sans", sans-serif;
+}
+
+p {
+    margin-bottom: 2.5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

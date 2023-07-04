@@ -1,0 +1,311 @@
+@use 'base';
+@use './abstracts';
+
+
+.banner__image
+{
+    background: abstracts.$primary-blue url('https://www.specbee.com/themes/custom/specbee/assets/media/webp/billboard-bg-light.webp') no-repeat 50%;
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 600px;
+}
+
+.service {
+    background-color: abstracts.$primary-blue;
+
+    &__image__wrapper {
+        background-image: url('https://www.specbee.com/themes/custom/specbee/assets/media/icons/polygon.svg');
+        background-repeat: no-repeat;
+        height: 15rem;
+        width: 15rem;
+        background-position-x: 50%;
+        background-position-y: center;
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+
+        img {
+            width: 6rem;
+            transition: transform 0.35s ease-in-out;
+        }
+
+        &:hover img {
+            transform: scale(0.85);
+        }
+
+        &:before {
+            background: url('https://www.specbee.com/themes/custom/specbee/assets/media/icons/polygon-line.svg') no-repeat 50%/contain;
+            content: "";
+            height: 17.5rem;
+            left: -1.1875rem;
+            position: absolute;
+            top: -1.125rem;
+            width: 17.5rem;
+            transform: scale(0.5);
+            z-index: -1;
+            transition: all .25s ease-in-out;
+        }
+        &:hover:before {
+            transform: scale(1);
+            z-index: 0;
+        }
+
+    }
+    &__heading {
+        margin-top: 0;
+        font-size: 5rem;
+        padding-top: 5rem;
+        color: abstracts.$white;
+        margin-bottom: 0;
+
+        &::before {
+            content: "";
+            height: 0.75rem;
+            width: 150px;
+            display: inline-block;
+            margin-bottom: 15px;
+            vertical-align: middle;
+            margin-right: 50px;
+            background-color: abstracts.$yellow;
+        }
+    }
+    &__wrapper {
+        max-width: 65rem;
+        padding-top: 50px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2.5rem;
+        padding-bottom: 20px;
+    }
+    &__card {
+        width: 30%;
+        text-align: center;
+        color: abstracts.$white;
+        position: relative;
+    }
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 800;
+
+        a {
+            color: abstracts.$white;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     bottom: 0;
+            //     left: 0;
+            //     right: 0;
+            //   }
+          }
+      }
+      &__text {
+        font-size: .875rem;
+      }
+      @media only screen and (max-width: 1024px) {
+        &__heading {
+            width: 10px;
+            margin-left: 15px;
+
+        &::before {
+          display: none;
+      }
+      &__wrapper {
+        padding-top: 0;
+        margin: 0 10px;
+      }
+      }
+    }
+      @media only screen and (max-width: 768px) {
+        &__heading {
+            font-size: 4rem;
+              width: 100%;
+              margin-left: 0;
+
+      &::before {
+        display: inline-block;
+        margin-right: 20px;
+        width: 50px;
+      }
+    }
+
+      &__wrapper {
+        gap: 3.5rem;
+        margin: 0px 20px;
+        padding-top: 0;
+      }
+      &__card {
+        width: 46%;
+      }
+      &__text {
+        padding: 0px 50px;
+      }
+      }
+
+      @media only screen and (max-width: 425px) {
+      &__card {
+          width: 100%;
+      }
+
+      &__heading {
+        font-size: 2rem;
+        width: 20px;
+        margin-left: 50px;
+      }
+      &__heading::before {
+        width: 38px;
+        position: absolute;
+        // top: 125px;
+        left: 0;
+      }
+      }
+
+}
+
+.container {
+    padding: 40px 275px;
+    color: black;
+    margin-top: 20px;
+
+
+    &__text__wrapper{
+        display: flex;
+    }
+    &__quote-icon {
+        fill: abstracts.$primary-blue;
+        width: 50px;
+    }
+    &__description {
+        font-size: 1.5rem;
+        padding-left: 10px;
+    }
+
+    &__name {
+        font-size: 1.75rem;
+        font-weight: bold;
+        margin-top: 50px;
+        margin-bottom: 0;
+        padding-left: 60px;
+    }
+
+    &__pos {
+        margin-top: 0;
+        padding-left: 60px;
+    }
+}
+.ideas__block {
+    background-color: abstracts.$primary-blue;
+    text-align: center;
+    padding: 80px;
+
+
+    &__text {
+        font-size: 2.25rem;
+        margin: 0;
+        line-height: 1.5;
+        color: abstracts.$white;
+    }
+
+    &__btn {
+        margin-top: 50px;
+
+    &-link {
+        // background-color: abstracts.$yellow;
+        // border: 0.0625rem solid abstracts.$yellow;
+        // color: abstracts.$primary-blue;
+        // text-decoration: none;
+        // padding: 8px 30px;
+        // font-weight: bold;
+        // font-size: 12px;
+        // border-radius: 4px;
+        @include abstracts.button;
+
+        &:hover {
+            background-color: abstracts.$primary-blue;
+            border: 1px solid abstracts.$yellow;
+        }
+    }
+    &-text {
+        text-decoration: none;
+
+        &:hover {
+            color: abstracts.$yellow;
+            background-color: abstracts.$primary-blue;
+        }
+
+
+    }
+    }
+    @media only screen and (max-width: 768px) {
+        background-color: abstracts.$primary-blue;
+        text-align: center;
+        padding: 40px 0;
+
+        &__text {
+            font-size: 45px;
+            margin: 0;
+            line-height: 1;
+            color: abstracts.$white;
+    }
+    &__btn-link {
+        padding: 10px 30px;
+    }
+    &__text {
+        font-size: 3.25rem;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 425px){
+    &__text {
+    font-size: 2.25rem;
+}
+}
+
+}
+
+@media only screen and (max-width: 768px){
+.container {
+    padding: 40px 20px;
+
+    &__description {
+        font-size: 1.2rem;
+    }
+
+    &__name {
+        font-size: 1.125rem;
+}
+&__pos {
+    margin-top: 0;
+    font-size: 0.8rem;
+
+}
+}
+}
+
+@media only screen and (max-width: 425px){
+    .container__text__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .container__quote-icon{
+            width: 70px;
+        }
+        .container__name {
+        padding-left: 0;
+    }
+    .container__pos {
+    padding-left: 0;
+}
+}
+

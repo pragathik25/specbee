@@ -1,0 +1,11 @@
+@use './colors' as *;
+@mixin button {
+    background-color: $yellow;
+        border: 0.0625rem solid $yellow;
+        color: $primary-blue;
+        text-decoration: none;
+        padding: 8px 30px;
+        font-weight: bold;
+        font-size: 12px;
+        border-radius: 4px;
+}
