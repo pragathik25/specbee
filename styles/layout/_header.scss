@@ -11,16 +11,18 @@ header{
       color: abstracts.$white;
       text-decoration: none;
       font-size: 1.5rem;
+      letter-spacing: .125rem;
+      line-height: 1.25;
     }
   }
 }
 
   .navbar{
     min-height: 70px;
+    padding-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 
   &-branding{
     font-size: 2rem;
@@ -33,10 +35,26 @@ header{
 
   }
 
+  svg {
+    fill: abstracts.$white;
+  }
+
   &__contact {
     display: flex;
     width: 70px;
     justify-content: space-between;
+
+    @media screen and (min-width: 768px) {
+      width: 80px;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 160px;
+      svg {
+        display: none;
+      }
+    }
+
+
   }
 
 }
@@ -103,4 +121,34 @@ header{
   }
 .nav-menu__sub-menu {
   display: none;
+}
+
+.nav-menu__sub-menu.active {
+  display: block;
+}
+.sub-link {
+  font-size: 1rem;
+}
+.contact-link {
+  display: block;
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+    @include abstracts.button;
+    padding: 0.5rem;
+    text-transform: uppercase;
+  }
+
+}
+
+.hamburger__inner {
+
+  & .bar:nth-child(1){
+    rotate: 90deg;
+    transform: translateX(7px);
+  }
+  &.active .bar:nth-child(1){
+    opacity: 0;
+  }
 }

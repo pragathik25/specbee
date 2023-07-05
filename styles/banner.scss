@@ -1,0 +1,62 @@
+@use './abstracts';
+
+.banner {
+
+    &__image
+    {
+        background: abstracts.$primary-blue url('https://www.specbee.com/themes/custom/specbee/assets/media/webp/billboard-bg-light.webp') no-repeat 50%;
+        background-size: cover;
+        background-blend-mode: multiply;
+        width: 100%;
+    }
+    &__wrapper {
+        padding: 0 20px;
+        margin-bottom: 5rem;
+    }
+    &-head {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: abstracts.$white;
+        padding-top: 3.5rem;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+
+    &-text {
+        color: abstracts.$white;
+        margin: 0 auto 1.75rem;
+    }
+    &-btn {
+        margin-top: 3.5rem;
+    }
+    &-link {
+        @include abstracts.button;
+    }
+
+    &__pic img {
+        max-width: 100%;
+    }
+
+    &__title-sec {
+        color: abstracts.$white;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        letter-spacing: 0.125rem;
+
+        &::after{
+            background-color: #e3f307;
+            content: "";
+            display: block;
+            height: 0.3125rem;
+            left: 50%;
+            position: absolute;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: 3.75rem;
+        }
+    }
+}
+

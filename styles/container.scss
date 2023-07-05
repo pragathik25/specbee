@@ -1,0 +1,85 @@
+@use './abstracts';
+.container {
+    padding: 0 20px;
+    padding-top: 56px;
+    padding-bottom: 84px;
+    color: abstracts.$white;
+    margin: 20px 0;
+    background: abstracts.$primary-blue;
+
+    @media only screen and (min-width: 768px){
+        padding: 0 50px;
+        padding-top: 64px;
+        padding-bottom: 111px;
+    }
+    @media only screen and (min-width: 1024px){
+        padding-bottom: 152px;
+    }
+
+    @media only screen and (min-width: 1440px){
+        padding-right:250px;
+        padding-left:250px;
+    }
+
+    &__text__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+
+        @media only screen and (min-width: 768px){
+            flex-wrap: nowrap;
+        }
+    }
+    &__quote-icon {
+        fill: abstracts.$yellow;
+        width: 80px;
+
+        @media only screen and (min-width: 768px){
+            width: 60px;
+            margin-right: 20px;
+    }
+
+    @media only screen and (min-width: 1024px){
+        width: 75px;
+}
+}
+    &__description {
+        font-size: 1rem;
+        margin-top: 20px;
+        line-height: 1.25;
+        @media only screen and (min-width: 768px){
+            font-size: 1.5rem;
+            line-height: 1.25;
+    }
+    }
+
+    &__name {
+        font-size: 1.125rem;
+        font-weight: bold;
+        margin-top: 50px;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        @media only screen and (min-width: 768px){
+            font-size: 1.75rem;
+            padding-left: 75px;
+    }
+    @media only screen and (min-width: 768px){
+        padding-left: 90px;
+}
+
+    }
+
+    &__pos {
+        margin-top: 0;
+        font-size: 0.75rem;
+        padding-left: 0;
+
+        @media only screen and (min-width: 768px){
+            font-size: 1rem;
+            padding-left: 75px;
+    }
+    @media only screen and (min-width: 768px){
+        padding-left: 90px;
+}
+    }
+}

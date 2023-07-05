@@ -98,8 +98,6 @@
 }
 @media screen and (min-width: 1024px) {
   .insights__cards {
-    width: 24.4rem;
-    padding: 0;
     overflow: hidden;
   }
 }
@@ -116,7 +114,7 @@
 .insights__title {
   color: #0020f6;
   position: relative;
-  width: 70%;
+  width: 80%;
   text-transform: uppercase;
   line-height: 1.5;
 }
@@ -125,28 +123,100 @@
     width: 200px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .insights__title {
+    width: 280px;
+  }
+}
 .insights__title::after {
   position: absolute;
   content: "";
   height: 0.25rem;
-  width: 80px;
+  width: 70px;
   display: inline-block;
-  right: -51%;
+  right: -88px;
   top: 5%;
   background-color: #e3f307;
 }
 @media screen and (min-width: 768px) {
   .insights__title::after {
-    right: -47%;
+    right: -154px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .insights__title::after {
+    right: -94px;
   }
 }
 @media screen and (min-width: 1440px) {
   .insights__title::after {
-    right: -56%;
+    right: -90px;
   }
 }
 .insights__desc {
   font-size: 12px;
   margin-top: 10px;
   font-weight: bold;
+}
+
+.ideas__block {
+  background-color: #0020f6;
+  text-align: center;
+  padding: 80px;
+}
+.ideas__block__text {
+  font-size: 2.25rem;
+  margin: 0;
+  line-height: 1.5;
+  color: #fff;
+}
+.ideas__block__btn {
+  margin-top: 50px;
+}
+.ideas__block__btn-link {
+  background-color: #e3f307;
+  border: 0.0625rem solid #e3f307;
+  color: #0020f6;
+  text-decoration: none;
+  padding: 8px 40px;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 4px;
+  letter-spacing: 2px;
+}
+.ideas__block__btn-link:hover {
+  background-color: #0020f6;
+  border: 1px solid #e3f307;
+  color: #e3f307;
+}
+.ideas__block__btn-text {
+  text-decoration: none;
+}
+.ideas__block__btn-text:hover {
+  color: #e3f307;
+  background-color: #0020f6;
+}
+@media only screen and (max-width: 768px) {
+  .ideas__block {
+    background-color: #0020f6;
+    text-align: center;
+    padding: 40px 0;
+  }
+  .ideas__block__text {
+    font-size: 45px;
+    margin: 0;
+    line-height: 1;
+    color: #fff;
+  }
+  .ideas__block__btn-link {
+    padding: 10px 30px;
+  }
+  .ideas__block__text {
+    font-size: 3.25rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .ideas__block__text {
+    font-size: 2.25rem;
+  }
 }

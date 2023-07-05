@@ -4,8 +4,15 @@
         border: 0.0625rem solid $yellow;
         color: $primary-blue;
         text-decoration: none;
-        padding: 8px 30px;
+        padding: 8px 40px;
         font-weight: bold;
         font-size: 12px;
         border-radius: 4px;
+        letter-spacing: 2px;
+
+        &:hover {
+            background-color: $primary-blue;
+            border: 1px solid $yellow;
+            color: $yellow;
+        }
 }

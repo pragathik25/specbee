@@ -1,0 +1,95 @@
+.container {
+  padding: 0 20px;
+  padding-top: 56px;
+  padding-bottom: 84px;
+  color: #fff;
+  margin: 20px 0;
+  background: #0020f6;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 0 50px;
+    padding-top: 64px;
+    padding-bottom: 111px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding-bottom: 152px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .container {
+    padding-right: 250px;
+    padding-left: 250px;
+  }
+}
+.container__text__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  .container__text__wrapper {
+    flex-wrap: nowrap;
+  }
+}
+.container__quote-icon {
+  fill: #e3f307;
+  width: 80px;
+}
+@media only screen and (min-width: 768px) {
+  .container__quote-icon {
+    width: 60px;
+    margin-right: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container__quote-icon {
+    width: 75px;
+  }
+}
+.container__description {
+  font-size: 1rem;
+  margin-top: 20px;
+  line-height: 1.25;
+}
+@media only screen and (min-width: 768px) {
+  .container__description {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+.container__name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+@media only screen and (min-width: 768px) {
+  .container__name {
+    font-size: 1.75rem;
+    padding-left: 75px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container__name {
+    padding-left: 90px;
+  }
+}
+.container__pos {
+  margin-top: 0;
+  font-size: 0.75rem;
+  padding-left: 0;
+}
+@media only screen and (min-width: 768px) {
+  .container__pos {
+    font-size: 1rem;
+    padding-left: 75px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container__pos {
+    padding-left: 90px;
+  }
+}
