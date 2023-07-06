@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Work Sans", sans-serif;
+  font-family: "hanson", sans-serif;
 }
 
 .footer {
@@ -111,7 +111,7 @@
   margin-top: 50px;
 }
 .footer__social h3 {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   color: rgb(0, 17, 134);
 }
 .footer__social-icon {
@@ -176,8 +176,13 @@
   transition: 0.5s;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "hanson", sans-serif;
+}
+
 header {
-  background-color: #0020f6;
   padding: 0 20px;
 }
 header li {
@@ -189,6 +194,24 @@ header li a {
   font-size: 1.5rem;
   letter-spacing: 0.125rem;
   line-height: 1.25;
+  font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+  header li a {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header li a {
+    font-size: 3rem;
+  }
+}
+
+.header.active {
+  background-color: #0020f6;
+}
+.header.active .navbar__contact svg {
+  display: none;
 }
 
 .navbar {
@@ -256,25 +279,26 @@ header li a {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 70px;
+    top: 80px;
     gap: 0;
     flex-direction: column;
     background-color: #0020f6;
     width: 100%;
-    text-align: center;
     transition: 0.3s;
+    padding-top: 40px;
+  }
+  .nav-menu::before {
+    content: "";
+    height: 0.25rem;
+    width: 55px;
+    position: absolute;
+    left: 0;
+    top: 75px;
+    background-color: #e3f307;
   }
   .nav-item {
     margin: 20px 0;
-  }
-  .nav-item:first-child::before {
-    content: "";
-    height: 0.25rem;
-    width: 60px;
-    position: absolute;
-    left: 0;
-    top: 30px;
-    background-color: #e3f307;
+    padding-left: 80px;
   }
   .nav-item a:hover {
     color: #e3f307;
@@ -288,12 +312,33 @@ header li a {
   display: none;
 }
 
+.bar1 {
+  display: block;
+  width: 20px;
+  height: 5px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
 .nav-menu__sub-menu.active {
   display: block;
+  padding-left: 30px;
+}
+
+.sub-item {
+  margin: 20px 0;
+  padding-right: 30px;
 }
 
 .sub-link {
   font-size: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .sub-link {
+    font-size: 1.5rem;
+  }
 }
 
 .contact-link {
@@ -322,10 +367,14 @@ header li a {
   }
 }
 
-.hamburger__inner .bar:nth-child(1) {
-  rotate: 90deg;
-  transform: translateX(7px);
+.hamburger__inner {
+  display: inline-block;
+  padding-left: 20px;
 }
-.hamburger__inner.active .bar:nth-child(1) {
+.hamburger__inner .bar1:nth-child(1) {
+  rotate: 90deg;
+  transform: translateX(10px);
+}
+.hamburger__inner.active .bar1:nth-child(1) {
   opacity: 0;
 }

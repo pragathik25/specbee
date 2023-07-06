@@ -1,7 +1,10 @@
 @use './abstracts';
-
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'hanson', sans-serif;
+}
 header{
-    background-color: abstracts.$primary-blue;
     padding: 0 20px;
 
     li{
@@ -13,8 +16,24 @@ header{
       font-size: 1.5rem;
       letter-spacing: .125rem;
       line-height: 1.25;
+      font-weight: bold;
+
+      @media only screen and (min-width: 768px) {
+        font-size: 2rem;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        font-size: 3rem;
+      }
     }
   }
+}
+.header.active {
+    background-color: abstracts.$primary-blue;
+
+    .navbar__contact svg {
+        display: none;
+    }
 }
 
   .navbar{
@@ -53,10 +72,7 @@ header{
         display: none;
       }
     }
-
-
   }
-
 }
   .hamburger{
     cursor: pointer;
@@ -88,26 +104,29 @@ header{
   .nav-menu{
       position: fixed;
       left: -100%;
-      top: 70px;
+      top: 80px;
       gap: 0;
       flex-direction: column;
       background-color: abstracts.$primary-blue;
       width: 100%;
-      text-align: center;
       transition: 0.3s;
+      padding-top: 40px;
+
+
+      &::before {
+        content: "";
+        height: 0.25rem;
+        width: 55px;
+        position: absolute;
+        left: 0;
+        top: 75px;
+        background-color:abstracts.$yellow;
+  }
+
     }
   .nav-item{
       margin: 20px 0;
-
-      &:first-child::before {
-        content: "";
-        height: 0.25rem;
-        width: 60px;
-        position: absolute;
-        left: 0;
-        top: 30px;
-        background-color:abstracts.$yellow;
-  }
+      padding-left: 80px;
 
   a:hover {
     color: abstracts.$yellow;
@@ -122,12 +141,30 @@ header{
 .nav-menu__sub-menu {
   display: none;
 }
+.bar1{
+  display: block;
+  width: 20px;
+  height: 5px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: abstracts.$white;
+}
 
 .nav-menu__sub-menu.active {
   display: block;
+  padding-left: 30px;
+}
+.sub-item {
+  margin: 20px 0;
+  padding-right: 30px;
 }
 .sub-link {
   font-size: 1rem;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 }
 .contact-link {
   display: block;
@@ -144,11 +181,14 @@ header{
 
 .hamburger__inner {
 
-  & .bar:nth-child(1){
+    display: inline-block;
+    padding-left: 20px;
+
+  & .bar1:nth-child(1){
     rotate: 90deg;
-    transform: translateX(7px);
+    transform: translateX(10px);
   }
-  &.active .bar:nth-child(1){
+  &.active .bar1:nth-child(1){
     opacity: 0;
   }
 }

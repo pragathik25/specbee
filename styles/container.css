@@ -18,7 +18,7 @@
     padding-bottom: 152px;
   }
 }
-@media only screen and (min-width: 1326px) {
+@media only screen and (min-width: 1440px) {
   .container {
     padding-right: 250px;
     padding-left: 250px;
@@ -92,13 +92,4 @@
   .container__pos {
     padding-left: 90px;
   }
-}
-
-.descontainer {
-  background-color: #fff;
-  color: black;
-}
-
-.des__container__quote-icon {
-  fill: #001186;
-}
+}/*# sourceMappingURL=container.css.map */

@@ -1,0 +1,20 @@
+.ourwork__card {
+  width: 35%;
+  position: relative;
+}
+.ourwork__card__info {
+  display: none;
+}
+.ourwork__img img {
+  max-width: 100%;
+}
+.ourwork__content {
+  position: absolute;
+  bottom: 30px;
+  color: #fff;
+}
+.ourwork__title {
+  padding-right: 6.5rem;
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+}

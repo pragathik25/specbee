@@ -22,6 +22,7 @@
   padding-top: 50px;
   max-width: 60rem;
   margin: 0 auto;
+  padding-bottom: 3.5rem;
 }
 .standingout__item {
   width: 30%;
@@ -99,4 +100,11 @@
     top: 100px;
     left: -50px;
   }
+}
+
+.destandingout {
+  background-color: #0020f6;
+}
+.destandingout__heading {
+  color: #fff;
 }

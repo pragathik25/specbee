@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Work Sans", sans-serif;
+  font-family: "hanson", sans-serif;
 }
 
 p {
@@ -21,6 +21,11 @@ p:last-child {
 @media screen and (min-width: 768px) {
   .crafting__item {
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1326px) {
+  .crafting__item {
+    padding: 3.5rem 12.25rem;
   }
 }
 .crafting__item:first-child {

@@ -18,7 +18,7 @@
     padding: 0 20px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1326px) {
   .insights__heading {
     padding: 0;
     margin-left: -20px;
@@ -39,7 +39,7 @@
     display: none;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1326px) {
   .insights__heading::before {
     content: "";
     height: 0.75rem;
@@ -63,7 +63,7 @@
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1326px) {
   .insights__text {
     padding: 0 120px;
     margin-bottom: 70px;
@@ -76,6 +76,7 @@
   display: flex;
   flex-direction: column;
   padding: 0 20px;
+  padding-bottom: 3.5rem;
 }
 @media screen and (min-width: 1024px) {
   .insights__wrapper {
@@ -84,7 +85,7 @@
     justify-content: center;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1326px) {
   .insights__wrapper {
     padding: 0 120px;
   }
@@ -123,7 +124,7 @@
     width: 200px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1326px) {
   .insights__title {
     width: 280px;
   }
@@ -148,7 +149,7 @@
     right: -94px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1326px) {
   .insights__title::after {
     right: -90px;
   }
@@ -157,66 +158,4 @@
   font-size: 12px;
   margin-top: 10px;
   font-weight: bold;
-}
-
-.ideas__block {
-  background-color: #0020f6;
-  text-align: center;
-  padding: 80px;
-}
-.ideas__block__text {
-  font-size: 2.25rem;
-  margin: 0;
-  line-height: 1.5;
-  color: #fff;
-}
-.ideas__block__btn {
-  margin-top: 50px;
-}
-.ideas__block__btn-link {
-  background-color: #e3f307;
-  border: 0.0625rem solid #e3f307;
-  color: #0020f6;
-  text-decoration: none;
-  padding: 8px 40px;
-  font-weight: bold;
-  font-size: 12px;
-  border-radius: 4px;
-  letter-spacing: 2px;
-}
-.ideas__block__btn-link:hover {
-  background-color: #0020f6;
-  border: 1px solid #e3f307;
-  color: #e3f307;
-}
-.ideas__block__btn-text {
-  text-decoration: none;
-}
-.ideas__block__btn-text:hover {
-  color: #e3f307;
-  background-color: #0020f6;
-}
-@media only screen and (max-width: 768px) {
-  .ideas__block {
-    background-color: #0020f6;
-    text-align: center;
-    padding: 40px 0;
-  }
-  .ideas__block__text {
-    font-size: 45px;
-    margin: 0;
-    line-height: 1;
-    color: #fff;
-  }
-  .ideas__block__btn-link {
-    padding: 10px 30px;
-  }
-  .ideas__block__text {
-    font-size: 3.25rem;
-  }
-}
-@media only screen and (max-width: 425px) {
-  .ideas__block__text {
-    font-size: 2.25rem;
-  }
 }

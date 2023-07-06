@@ -1,11 +1,12 @@
-@use './abstracts';
-.container {
+@use './abstracts' as *;
+
+.container  {
     padding: 0 20px;
     padding-top: 56px;
     padding-bottom: 84px;
-    color: abstracts.$white;
+    color: $white;
     margin: 20px 0;
-    background: abstracts.$primary-blue;
+    background: $primary-blue;
 
     @media only screen and (min-width: 768px){
         padding: 0 50px;
@@ -16,7 +17,7 @@
         padding-bottom: 152px;
     }
 
-    @media only screen and (min-width: 1440px){
+    @media only screen and (min-width: 1326px){
         padding-right:250px;
         padding-left:250px;
     }
@@ -30,7 +31,7 @@
         }
     }
     &__quote-icon {
-        fill: abstracts.$yellow;
+        fill: $yellow;
         width: 80px;
 
         @media only screen and (min-width: 768px){
@@ -82,4 +83,13 @@
         padding-left: 90px;
 }
     }
+}
+
+.descontainer {
+    background-color: $white;
+    color: $black;
+}
+
+.des__container__quote-icon {
+    fill: $blue;
 }

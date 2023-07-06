@@ -27,6 +27,7 @@
             padding-top: 50px;
             max-width: 60rem;
             margin: 0 auto;
+            padding-bottom: 3.5rem;
           }
 
           &__item {
@@ -121,3 +122,10 @@
     }
 
 
+.destandingout {
+    background-color: abstracts.$primary-blue;
+
+    &__heading {
+        color: abstracts.$white;
+    }
+}

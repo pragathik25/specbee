@@ -18,7 +18,7 @@
             padding: 0 20px;
         }
 
-        @media screen and (min-width:1440px) {
+        @media screen and (min-width:1326px) {
             padding: 0;
             margin-left: -20px;
         }
@@ -39,7 +39,7 @@
                 display: none;
             }
 
-            @media screen and (min-width:1440px) {
+            @media screen and (min-width:1326px) {
                 content: "";
                 height: 0.75rem;
                 width: 80px;
@@ -61,7 +61,7 @@
             width: 560px;
             margin-bottom: 30px;
         }
-        @media screen and (min-width:1440px) {
+        @media screen and (min-width:1326px) {
             padding: 0 120px;
             margin-bottom: 70px;
             margin-top: 30px;
@@ -74,6 +74,7 @@
         display: flex;
         flex-direction: column;
         padding: 0 20px;
+        padding-bottom: 3.5rem;
 
 
         @media screen and (min-width:1024px) {
@@ -82,7 +83,7 @@
             justify-content: center;
         }
 
-        @media screen and (min-width:1440px) {
+        @media screen and (min-width:1326px) {
             padding: 0 120px;
         }
 
@@ -123,7 +124,7 @@
         @media screen and (min-width:1024px) {
             width: 200px;
         }
-        @media screen and (min-width:1440px) {
+        @media screen and (min-width:1326px) {
             width: 280px;
         }
         &::after {
@@ -142,7 +143,7 @@
             @media screen and (min-width:1024px) {
                 right: -94px;
             }
-            @media screen and (min-width:1440px) {
+            @media screen and (min-width:1326px) {
                 right: -90px;
             }
         }
@@ -153,61 +154,4 @@
         margin-top: 10px;
         font-weight: bold;
     }
-}
-
-.ideas__block {
-    background-color: abstracts.$primary-blue;
-    text-align: center;
-    padding: 80px;
-
-
-    &__text {
-        font-size: 2.25rem;
-        margin: 0;
-        line-height: 1.5;
-        color: abstracts.$white;
-    }
-
-    &__btn {
-        margin-top: 50px;
-
-    &-link {
-        @include abstracts.button;
-    }
-    &-text {
-        text-decoration: none;
-
-        &:hover {
-            color: abstracts.$yellow;
-            background-color: abstracts.$primary-blue;
-        }
-
-
-    }
-    }
-    @media only screen and (max-width: 768px) {
-        background-color: abstracts.$primary-blue;
-        text-align: center;
-        padding: 40px 0;
-
-        &__text {
-            font-size: 45px;
-            margin: 0;
-            line-height: 1;
-            color: abstracts.$white;
-    }
-    &__btn-link {
-        padding: 10px 30px;
-    }
-    &__text {
-        font-size: 3.25rem;
-    }
-}
-
-@media only screen and (max-width: 425px){
-    &__text {
-    font-size: 2.25rem;
-}
-}
-
 }
