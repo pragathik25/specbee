@@ -1,0 +1,118 @@
+@use './abstracts' as *;
+
+.mixandmatch {
+    background-color: $primary-blue;
+    margin-bottom: 10px;
+    padding-top: 6rem;
+    position: relative;
+
+    &__desc {
+        padding-bottom: 4rem;
+        max-width: 40rem;
+        margin-left: 225px;
+        color: $white;
+        font-size: 1.125rem;
+        line-height: 1.65;
+    }
+
+    &__heading {
+        font-size: 4.0625rem;
+        color: $white;
+        margin-left: 225px;
+        padding-bottom: 4rem;
+
+        &:before {
+            background-color: $yellow;
+            content: "";
+            height: 0.625rem;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            position: absolute;
+            top: 120px;
+            left: 0;
+            width: 10rem;
+        }
+    }
+}
+.accordion {
+
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    &__wrapper {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        justify-content: center;
+        gap: 3.5rem;
+    }
+
+    &__item {
+        border-top: .0625rem solid $white;
+        width: 35rem;
+
+        &.active .accordion__title::after {
+            display: none;
+        }
+
+        &:last-child {
+            border-bottom: .0625rem solid $white;
+        }
+    }
+
+    &__title {
+        background-color: $primary-blue;
+        padding: 16px 40px 16px 0;
+        cursor: pointer;
+        color: $white;
+        font-size: 20px;
+        font-weight: 800;
+        position: relative;
+
+        &::before {
+            background: $white;
+            content: "";
+            height: 0.25rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transition: all .25s ease-in-out;
+            width: 1rem;
+        }
+
+        &::after {
+            background: $white;
+            content: "";
+            height: 0.25rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transition: all .25s ease-in-out;
+            transform: rotate(90deg);
+            width: 1rem;
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+        max-height: 0;
+        color: $white;
+
+        &.show {
+            max-height: 500px;
+            padding-bottom: 2.5rem;
+
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 2;
+        }
+
+        li {
+            font-size: 1.125rem;
+            line-height: 2;
+        }
+    }
+}

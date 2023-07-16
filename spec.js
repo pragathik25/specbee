@@ -19,3 +19,4 @@ hamburgerInner.addEventListener("click", () => {
     hamburgerInner.classList.toggle("active");
     navMenuSubMenu.classList.toggle("active");
 })
+
